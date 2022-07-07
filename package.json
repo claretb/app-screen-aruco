@@ -1,5 +1,5 @@
 {
-  "name": "app-screen-detector",
+  "name": "app-screen-aruco",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
