@@ -1,19 +1,20 @@
 {
   "files": {
     "main.css": "/app-screen-aruco/static/css/main.ee662bd2.css",
-    "main.js": "/app-screen-aruco/static/js/main.e2f48d04.js",
+    "main.js": "/app-screen-aruco/static/js/main.72e4f3b8.js",
     "static/js/787.ad81e483.chunk.js": "/app-screen-aruco/static/js/787.ad81e483.chunk.js",
+    "static/media/car.gif": "/app-screen-aruco/static/media/car.f5992d990d1664c9b676.gif",
     "static/media/aruco-61.svg": "/app-screen-aruco/static/media/aruco-61.de6de0d921a2cdd7f5a061142714c8a8.svg",
     "static/media/aruco-273.svg": "/app-screen-aruco/static/media/aruco-273.1b95584af0d27e7af4b57b9f11648d23.svg",
     "static/media/aruco-922.svg": "/app-screen-aruco/static/media/aruco-922.1dca35342ecb8b76eb7a4abd66d67621.svg",
     "static/media/aruco-819.svg": "/app-screen-aruco/static/media/aruco-819.9b21dbb56dca725027bec1e1ad6f70a7.svg",
     "index.html": "/app-screen-aruco/index.html",
     "main.ee662bd2.css.map": "/app-screen-aruco/static/css/main.ee662bd2.css.map",
-    "main.e2f48d04.js.map": "/app-screen-aruco/static/js/main.e2f48d04.js.map",
+    "main.72e4f3b8.js.map": "/app-screen-aruco/static/js/main.72e4f3b8.js.map",
     "787.ad81e483.chunk.js.map": "/app-screen-aruco/static/js/787.ad81e483.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ee662bd2.css",
-    "static/js/main.e2f48d04.js"
+    "static/js/main.72e4f3b8.js"
   ]
 }
