@@ -31,25 +31,25 @@ function App() {
 
     var aruco819img = new Image();
     aruco819img.onload = function () {
-      ctx.drawImage(aruco819img, 0, 0, 50, 50);
+      ctx.drawImage(aruco819img, 5, 5, 100, 100);
     }
     aruco819img.src = aruco819;
 
     var aruco273img = new Image();
     aruco273img.onload = function () {
-      ctx.drawImage(aruco273img, canvasWidth + 50, 0, 50, 50);
+      ctx.drawImage(aruco273img, canvasWidth - 5, 5, 100, 100);
     }
     aruco273img.src = aruco273;
 
     var aruco61img = new Image();
     aruco61img.onload = function () {
-      ctx.drawImage(aruco61img, 0, canvasHeight + 50, 50, 50);
+      ctx.drawImage(aruco61img, 5, canvasHeight - 5, 100, 100);
     }
     aruco61img.src = aruco61;
 
     var aruco922img = new Image();
     aruco922img.onload = function () {
-      ctx.drawImage(aruco922img, canvasWidth + 50, canvasHeight + 50, 50, 50);
+      ctx.drawImage(aruco922img, canvasWidth - 5, canvasHeight - 5, 100, 100);
     }
     aruco922img.src = aruco922;
   }
@@ -77,18 +77,18 @@ function App() {
     <div style={{ position: "absolute", top: "50%", left: "50%" }}>
       <div style={{ position: "absolute", transform: "translate(-50%, -50%)"}}>
         <canvas
-          id="arucoCanvas"
-          width={canvasWidth + 100}
-          height={canvasHeight + 100}
-          style={{ backgroundColor: "transparent" }}
-        />
-      </div>
-      <div style={{ position: "absolute", transform: "translate(-50%, -50%)"}}>
-        <canvas
           id="appCanvas"
           width={canvasWidth}
           height={canvasHeight}
           style={{ backgroundColor: "#ede4c5" }}
+        />
+      </div>
+      <div style={{ position: "absolute", transform: "translate(-50%, -50%)"}}>
+        <canvas
+          id="arucoCanvas"
+          width={canvasWidth + 100}
+          height={canvasHeight + 100}
+          style={{ backgroundColor: "transparent" }}
         />
       </div>
     </div>
