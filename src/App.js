@@ -3,27 +3,13 @@ import aruco819 from './aruco-819.svg';
 import aruco273 from './aruco-273.svg';
 import aruco61 from './aruco-61.svg';
 import aruco922 from './aruco-922.svg';
+import carGif from './car.gif';
 import React, { useState, useEffect } from 'react';
 
 function App() {
   // Hard coded canvas size. It can be changed as desired.
   var canvasWidth = window.innerWidth < window.innerHeight ? window.innerWidth - 100: window.innerHeight - 100;
   var canvasHeight = window.innerWidth < window.innerHeight ? window.innerWidth - 100: window.innerHeight - 100;
-
-  function initAppCanvas() {
-    var canvas = document.getElementById("appCanvas");
-    var ctx = canvas.getContext("2d");
-
-    var fontSize = 20;
-
-    ctx.textAlign = "center";
-    ctx.font = "20px Arial";
-
-    ctx.fillText("This is your canvas. You can run your app in this area.", canvasWidth / 2, canvasHeight / 2 - fontSize);
-    ctx.fillText("It is currently" + canvasWidth + "x" + canvasHeight + "but you can change it however you want.", canvasWidth / 2, canvasHeight / 2);
-    ctx.fillText("Aruco markers can adapt their positions according to your sizes.", canvasWidth / 2, canvasHeight / 2 + fontSize);
-
-  }
 
   function initArucoCanvas() {
     var canvas = document.getElementById("arucoCanvas");
@@ -55,32 +41,31 @@ function App() {
   }
 
   useEffect(() => {
-    initAppCanvas();
     initArucoCanvas();
   }, [])
 
+  const [dimensions, setDimensions] = React.useState({ 
+    height: window.innerHeight,
+    width: window.innerWidth
+  })
+
   window.addEventListener('resize', () => {
-    var appCanvas = document.getElementById("appCanvas");
     var arucoCanvas = document.getElementById("arucoCanvas");
     canvasWidth = window.innerWidth < window.innerHeight ? window.innerWidth - 100: window.innerHeight - 100;
     canvasHeight = window.innerWidth < window.innerHeight ? window.innerWidth - 100: window.innerHeight - 100;
-    appCanvas.width = canvasWidth;
-    appCanvas.height = canvasHeight;
     arucoCanvas.width = canvasWidth + 100;
     arucoCanvas.height = canvasHeight + 100;
 
-    initAppCanvas();
     initArucoCanvas();
   })
 
   return (
     <div style={{ position: "absolute", top: "50%", left: "50%" }}>
-      <div style={{ position: "absolute", transform: "translate(-50%, -50%)"}}>
-        <canvas
-          id="appCanvas"
-          width={canvasWidth}
-          height={canvasHeight}
-          style={{ backgroundColor: "#ede4c5" }}
+      <div style={{  position: "absolute", transform: "translate(-50%, -50%)"}}>
+        <img
+          src={carGif}
+          width={canvasWidth * 3 / 4}
+          height={canvasHeight * 3 / 4}
         />
       </div>
       <div style={{ position: "absolute", transform: "translate(-50%, -50%)"}}>
